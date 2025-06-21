@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">👩‍💻 Pravalika</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button id="toggle-theme">🌙</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Hello, I'm <span class="typing"></span></h2>
+    <p>Web Developer | Designer | Coder</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="filters">
+      <button onclick="filterProjects('all')">All</button>
+      <button onclick="filterProjects('web')">Web</button>
+      <button onclick="filterProjects('design')">Design</button>
+    </div>
+    <div class="gallery">
+      <div class="card" data-type="web">
+        <img src="personal.jpg" />
+        <p>Personal Website</p>
+      </div>
+      <div class="card" data-type="design">
+        <img src="logo.jpg" />
+        <p>Logo Design</p>
+      </div>
+      <div class="card" data-type="web">
+        <img src="web.jpg" />
+        <p>HTML5 App</p>
+      </div>
+      <div class="card" data-type="design">
+        <img src="ux.jpg" />
+        <p>UI/UX Prototype</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="return handleSubmit()">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pravalika | Interactive Portfolio</p>
+  </footer>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>
